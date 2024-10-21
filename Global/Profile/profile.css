@@ -1,0 +1,208 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+        background: linear-gradient(to right, #283c86, #45a247); /* Blue to Green gradient */
+        color: #fff; /* White text for contrast */
+        text-align: center;    
+}
+
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.logo {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    float: right;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    background-color: #3db43f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px;
+    transition: background 0.2s  ease;
+}
+
+nav ul li a:hover {
+    background-color: #283c86;
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    width: 90%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+    padding: 50px 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-container:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Left Section - Profile Picture */
+.profile-picture-container {
+    flex: 1; /* Take less space compared to the form */
+    text-align: center;
+}
+
+.profile-picture {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.profile-picture img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture:hover img {
+    transform: scale(1.05);
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #283c86;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color:  #3db43f;
+}
+
+/* Right Section - Profile Details */
+.profile-details-container {
+    flex: 3; /* Take more space compared to the picture */
+    padding-left: 30px; /* Space between the picture and the form */
+    text-align: left;
+}
+
+.profile-header h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Profile Details Form */
+.profile-details form {
+    width: 100%;
+}
+
+.detail-item {
+    margin-bottom: 25px;
+}
+
+.detail-item label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.detail-item input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.detail-item input:focus {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #3db43f;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #283c86;
+}
+
+.upload-input {
+    display: none; /* Hide the default input */
+}
+
+.upload-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #283c86;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #3db43f;
+}

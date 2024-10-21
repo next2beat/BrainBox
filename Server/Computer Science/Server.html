@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="../../Server/Computer Science/Server.css">
+    <link rel="icon" href="../../Assets/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">BRAINBOX</div>
+            <ul>
+                <li><a onclick="confirmQuit()">Quit</a></li>
+                <li><a>Rules</a></li>
+                <li><a>Report</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- First Row: Question Board and Attempted Counter -->
+        <div class="div-container">
+            <div class="large-div" id="1">
+                <h1>Question Board</h1>
+                <div id="question-container"></div>
+            </div>
+            <div class="small-div" id="2">
+                <h2>Questions Attempted</h2>
+                <!-- Attempted counter positioned inside the box -->
+                <div id="attempted-counter">
+                    0 / 10
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row: Answer Box -->
+        <div class="div-container">
+            <div class="half-div" id="AB">
+                <h1 id="h">Answer Box</h1>
+                <div id="options-box"></div> <!-- Options will be inserted here dynamically -->
+            </div>
+            <div class="half-div" id="CB"></div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="button-container">
+            <button id="clear-btn">Clear</button>
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <script src="../../Server/Computer Science/Script.js"></script>
+</body>
+</html>

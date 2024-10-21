@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAINBOX</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="../../Assets/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BRAINBOX</div>
+            <ul class="nav-links">
+                <li><a href="../../home.html">Home</a></li>
+                <li><a href="../About/about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../Profile/profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br><br>
+
+    <main>
+        <h1 id="contact">Contact</h1>
+        <br><br><br>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="hidden" name="access_key" value="8aab3d9e-3d49-435e-b747-667e9d7bd60a">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email *" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone number">
+                </div>
+                <div class="form-group">
+                    <textarea name="comment" placeholder="What's the issue..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send</button>
+                <p id="result"></p> <!-- Message result -->
+            </form>
+        </div>
+    </main>
+
+    <!-- Popup Overlay -->
+    <div id="popup" class="popup-overlay" style="display: none;">
+        <div class="popup-box">
+            <h2>Thanks for reaching out!</h2>
+            <button id="closePopup">OK</button>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <script>
+        // Handle form submission to Web3Forms API
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            const result = document.getElementById('result');
+            
+            result.innerHTML = "<br>Please wait...";
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "<br>Form submitted successfully.";
+                    // Show the popup after successful submission
+                    document.getElementById('popup').style.display = 'flex';
+                } else {
+                    result.innerHTML = json.message;
+                }
+            })
+            .catch(error => {
+                result.innerHTML = "Something went wrong!";
+                console.log(error);
+            })
+            .then(() => {
+                form.reset(); // Reset form after submission
+                setTimeout(() => {
+                    result.innerHTML = ""; // Hide result message after 3 seconds
+                }, 3000);
+            });
+        });
+
+        // Handle popup close button
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+            window.location.href = '../../home.html'; // Redirect to home
+        });
+    </script>
+</body>
+</html>

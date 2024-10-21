@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../Assets/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BRAINBOX</div>
+            <ul class="nav-links">
+                <li><a href="../../home.html">Home</a></li>
+                <li><a href="../About/about.html">About</a></li>
+                <li><a href="../Contact/contact.html">Contact</a></li>
+                <li><a href="../Profile/profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+
+    <div class="profile-container">
+        <!-- Profile Picture Section -->
+        <div class="profile-picture-container">
+            <div class="profile-picture">
+                <img id="profileImg" src="https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436191.jpg?w=740&t=st=1729357958~exp=1729358558~hmac=a67c9216611e2f10aff31a1e681518a9e388184dc3ecdafd3aa991c8150e189b" alt="Profile Picture">
+            </div>
+            <!-- Custom file upload button -->
+            <label for="uploadBtn" class="upload-btn">Change Profile Photo</label>
+            <input type="file" id="uploadBtn" class="upload-input" />
+        </div>
+    
+        <!-- Profile Details Section -->
+        <div class="profile-details-container">
+            <div class="profile-header">
+                <h2>User Profile</h2>
+            </div>
+            <div class="profile-details">
+                <form action="#">
+                    <div class="detail-item">
+                        <label for="username">Username</label>
+                        <input type="text" id="usernameField" name="username" placeholder="Your Username">
+                    </div>
+                    <div class="detail-item">
+                        <label for="name">Name</label>
+                        <input type="text" id="nameField" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="detail-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="emailField" name="email" placeholder="Your Email">
+                    </div>
+                    <button type="submit">Save Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

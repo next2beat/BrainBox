@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAINBOX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="./Assets/Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BRAINBOX</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./Global/About/about.html">About</a></li>
+                <li><a href="./Global/Contact/contact.html">Contact</a></li>
+                <li><a href="./Global/Login/login.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h1>HERE TO CONNECT</h1>
+            <p>Untangle the web with us</p>
+            <a href="./Global/Singup/singup.html" class="cta-button">Sign up</a>
+            <a href="./Global/Login/login.html" class="cta-button">Log in</a>
+        </div>
+        <div class="hero-shapes">
+            <img src="./Assets/Images/image1.png" alt="Shape 1" class="shape">
+            <img src="./Assets/Images/image2.png" alt="Shape 2" class="shape">
+            <img src="./Assets/Images/image3.png" alt="Shape 3" class="shape">
+            <img src="./Assets/Images/image4.png" alt="Shape 4" class="shape">
+        </div>
+    </section>
+
+    <!-- Third Section: Play Servers -->
+    <div class="container">
+        <h1>Learn, Play, Go!</h1>
+        <br>
+        <div class="servers">
+            <div class="server-card">
+                <i class="fas fa-book"></i>
+                <h3>English Server</h3>
+                <a href="./Subject Server/English/English.html"><button>Explore</button></a>
+            </div>
+            <div class="server-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Maths Server</h3>
+                <a href="./Subject Server/Maths/Maths.html"><button>Explore</button></a>
+            </div>
+            <div class="server-card">
+                <i class="fas fa-flask"></i>
+                <h3>Science Server</h3>
+                <a href="./Subject Server/Science/Science.html"><button>Explore</button></a>
+            </div>
+            <div class="server-card">
+                <i class="fas fa-globe"></i>
+                <h3>Social Science Server</h3>
+                <a href="./Subject Server/Social Science/SocialScience.html"><button>Explore</button></a>
+            </div>
+            <div class="server-card">
+                <i class="fas fa-laptop"></i>
+                <h3>Computer Server</h3>
+                <a href="./Subject Server/Computer Science/ComputerScience.html"><button>Explore</button></a>
+            </div>
+            <div class="server-card">
+                <i class="fas fa-th"></i>
+                <h3>Other Subjects Server</h3>
+                <button id="otherServerBtn">Explore</button>
+            </div>
+            
+            <!-- Modal for Other Subjects Server -->
+            <div id="otherServerModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>This server is under development.</p>
+                    <button id="modalOkBtn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <h2 id="footheading">Subscribe to our email</h2>
+        <p id="footpath">Join our email list for exclusive offers and the latest news.</p>
+        <div class="subscribe">
+          <form>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">→</button>
+          </form>
+        </div>
+    </footer>
+    <br>
+    <br>
+    <br>
+
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
